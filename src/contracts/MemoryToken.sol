@@ -4,7 +4,7 @@ import "./ERC721Full.sol";
 
 contract MemoryToken is ERC721Full  {
 
-    constructor() ERC721Full("Memory Token", "MEMORY") public {
+    constructor() ERC721Full("Vishmay Token", "VSH") public {
     }
 
     function mint(address _to, string memory _tokenURI) public returns(bool) {
