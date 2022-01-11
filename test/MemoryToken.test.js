@@ -7,9 +7,9 @@ require('chai')
   .should()
 
 contract('Memory Token', (accounts) => {
-  // code goes here...
+  
   let token
-
+  //this code runs everytime before a test to load token.
   before(async () => {
     token = await MemoryToken.deployed()
   })
@@ -22,15 +22,15 @@ contract('Memory Token', (accounts) => {
       assert.notEqual(address,null)
       assert.notEqual(address,undefined)
     })
-
+    //checks if deployed token has a name
     it("has a name", async ()=>{
       const name = await token.name()
-      assert.equal(name,"Memory Token")
+      assert.equal(name,"Vishmay Token")
     })
-
+    //checks if deployed token has a symbol
     it("has a symbol", async ()=> {
       const symbol = await token.symbol()
-      assert.equal(symbol,"MEMORY")
+      assert.equal(symbol,"VSH")
     })
   })
 
