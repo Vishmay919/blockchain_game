@@ -77,6 +77,7 @@ class App extends Component {
     }
   }
 
+  //connects app to our smart contract
   async loadBlockchainData() {
     const web3 = window.web3
     const accounts = await web3.eth.getAccounts()
